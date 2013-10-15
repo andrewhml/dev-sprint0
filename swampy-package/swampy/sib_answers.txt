@@ -1,6 +1,6 @@
 # Text answers from Week 0
 
-# Name:
+# Name: Andrew Lee
 
 
 
@@ -12,8 +12,25 @@ Explain what each of the following lines does. Use the terminology you learned f
 	wait_for_user()
 
 Answer:
+Line 1 imports everything from the TurtleWorld module
+Line 2 creates a TurtleWorld assigned to world
+Line 3 creates a Turtle assigned to bob
+Line 4 instructs TurtleWorld to wait for the user to do something
 
+To pass a parameter for the angle of the turn
+def fdlt(turtle, n, a):
+  fd(turtle, n)
+  lt(turtle, a)
 
+To be able to write bob.fdlt(length, angle) you would need to add the following code to TurtleWorld.py
+
+Create the function fdlt
+    def fdlt(self, n, a):
+        fd(self, n)
+        lt(self, a)
+
+Create the method fdlt
+fdlt = Turtle.fdlt
 
 
 
@@ -21,13 +38,13 @@ Answer:
 These questions pertain to the program you wrote in Week0.
 
 -- What are the arguments of polygon()?  What type is each argument?
-Answer:
+Answer: Polygon() takes a Turtle(), a distance or length, and an integer to calculate the number of sides
 
 -- What two turtle functions did you use to draw the sides of the polygon?
-Answer:
+Answer: fd() & lt()
 
 -- What are the arguments for polyline?  What type is each argument?
-Answer:
+Answer: Polyline() takes a Turtle(), a number of sides as an integer n, a distance or length integer, and an angle integer
 
 
 
@@ -36,10 +53,10 @@ Answer:
 Suppose you wrote a function, center_circle(), that draws a circle of a given radius around the current location of the turtle and restores the turtle to its starting point.
 
 -- What turtle functions would you use to move the turtle from the center to the edge of the circle and get ready to call the original circle() function?
-Answer:
+Answer: pu(bob) rt(bob) fd(bob, 25) lt(bob) pd(bob)
 
 -- Suppose the interface of this function requires the turtle to end up in the same place it started, facing in the same direction it started.
-Answer:
+Answer: pu(bob) lt(bob) fd(bob, 25) rt(bob) pd(bob)
 
 -- What is this type of requirement called?
-Answer:
+Answer: This is called a postcondition
